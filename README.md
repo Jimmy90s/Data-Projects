@@ -1,8 +1,8 @@
 # Portfolio-Projects
 Showcase of SQL, Tableau, Python data analysis related projects and challenges where I practice those skills.
 
-# Built with
-Python
+### Built with
+ - Python
 Jupyter Notebook
 SQL
 MS SQL Server
