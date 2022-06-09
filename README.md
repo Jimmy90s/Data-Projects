@@ -5,9 +5,12 @@ Showcase of SQL, Tableau, Python data analysis related projects and challenges w
  - Python
  - SQL
  - Excel
-. Tools
+### Tools
  - VS Code
  - Jupyter Notebook
  - MS SQL Server
  - Tableau
-https://github.com/Jimmy90s/Portfolio-Projects/tree/main/CA_TX_Income_vs_Education_Levels
+ 
+# Projects
+## [CA & TX Income vs Education Data Analysis](https://github.com/Jimmy90s/Portfolio-Projects/tree/main/CA_TX_Income_vs_Education_Levels)
+SQL, Python and Tableau project where I gathered us census data to perfrom data analysis and answer relation questions.
