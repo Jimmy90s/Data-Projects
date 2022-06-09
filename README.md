@@ -3,11 +3,11 @@ Showcase of SQL, Tableau, Python data analysis related projects and challenges w
 
 ### Built with
  - Python
-Jupyter Notebook
-SQL
-MS SQL Server
-Tableau
-Excel
-Tools
-VS Code
+ - SQL
+ - Excel
+. Tools
+ - VS Code
+ - Jupyter Notebook
+ - MS SQL Server
+ - Tableau
 https://github.com/Jimmy90s/Portfolio-Projects/tree/main/CA_TX_Income_vs_Education_Levels
