@@ -16,3 +16,4 @@ This is a fictional dataset created for helping the data analysts to practice ex
 4. Anything that might be helpfull.
 
 ![output](https://user-images.githubusercontent.com/103063112/174007371-d901cea6-07cb-4981-83e3-a408d52372a3.png)
+![output2](https://user-images.githubusercontent.com/103063112/174008072-447684d5-bd81-4eb1-b98b-eff1877b9eb7.png)
