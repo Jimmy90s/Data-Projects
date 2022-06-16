@@ -25,6 +25,22 @@ ALTER COLUMN Profit FLOAT
 ALTER TABLE [master].[dbo].[Sales]
 ALTER COLUMN Discount FLOAT
 
+-- Change Discount column to float
+ALTER TABLE [master].[dbo].[Sales]
+ALTER COLUMN [Order Date] Date
+
+-- Unique Categories
+SELECT DISTINCT Category
+FROM master.dbo.Sales
+
+-- Avg profit and customer count per region and category
+SELECT Region, Category, AVG(Profit) AS [Avg Profit], COUNT([Customer Name]) AS [Customer Count]
+FROM master.dbo.Sales
+WHERE Category LIKE '%Food%' 
+OR Category LIKE '%Snacks'
+GROUP BY Region, Category
+ORDER BY COUNT([Customer Name]) DESC
+
 -- List of unique Customers
 SELECT DISTINCT [Customer Name]
 FROM [master].[dbo].[Sales]
@@ -86,3 +102,4 @@ SELECT [Customer Name], SUM(Discount) AS [Total Discount]
 FROM [master].[dbo].[Sales]
 GROUP BY [Customer Name]
 ORDER BY AVG(Discount) DESC
+
