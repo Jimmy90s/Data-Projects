@@ -19,6 +19,6 @@ Showcase of SQL, Tableau, Python data analysis related projects and challenges w
 
 SQL, Python and Tableau project where I gathered us census data to perfrom data analysis and answer relation questions.
 
-## Supermart Grocery Sales - Retail Analytics Dataset
+## [Supermart Grocery Sales - Retail Analytics Dataset](https://github.com/Jimmy90s/Portfolio-Projects/tree/main/Supermart%20Grocery%20Sales%20-%20Retail%20Analytics%20Dataset)
 
 SQL, Python
