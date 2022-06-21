@@ -1,8 +1,8 @@
 This data is based on Microsoft's AdventureWorks database. Access version: [AdventureWorks sample databases](https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver1)
 
-Customer(CustomerID, FirstName, MiddleName, LastName, CompanyName, EmailAddress)
+. Customer(CustomerID, FirstName, MiddleName, LastName, CompanyName, EmailAddress)
 
-CustomerAddress(CustomerID, AddressID, AddressType)
+. CustomerAddress(CustomerID, AddressID, AddressType)
 
 Address(AddressID, AddressLine1, AddressLine2, City, StateProvince, CountyRegion, PostalCode)
 
