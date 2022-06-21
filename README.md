@@ -19,7 +19,7 @@ Showcase of SQL, Tableau, Python data analysis related projects and challenges w
 
 SQL, Python and Tableau project where I gathered us census data to perfrom data analysis and answer relation questions.
 
-## [AdventureWorks SQL Data Analysis]([https://sqlzoo.net/wiki/AdventureWorks](https://github.com/Jimmy90s/Portfolio-Projects/tree/main/AdventureWorks))
+## [AdventureWorks SQL Data Analysis](https://github.com/Jimmy90s/Portfolio-Projects/tree/main/AdventureWorks)
 
 SQL 
 
