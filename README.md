@@ -1,4 +1,4 @@
-# Portfolio-Projects
+# Data Analysis Portfolio Projects
 
 Showcase of SQL, Tableau, Python data analysis related projects and challenges where I practice those skills.
 
@@ -13,7 +13,7 @@ Showcase of SQL, Tableau, Python data analysis related projects and challenges w
  - MS SQL Server
  - Tableau
  
-# Projects
+# Data Analysis Projects
 
 ## [CA & TX Income vs Education Data Analysis](https://github.com/Jimmy90s/Portfolio-Projects/tree/main/CA_TX_Income_vs_Education_Levels)
 
