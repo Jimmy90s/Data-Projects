@@ -29,6 +29,6 @@ SQL, Python
 
 SQL 
 
-## Chinook SQL Data  Analysis
+## [Chinook SQL Data  Analysis](https://github.com/Jimmy90s/Data-Analysis-Portfolio-Projects/tree/main/Chinook%20SQL%20Data%20Analysis)
 
 SQL
