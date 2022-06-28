@@ -27,13 +27,18 @@ SQL, Python
 
 ## [AdventureWorks SQL Data Analysis](https://github.com/Jimmy90s/Portfolio-Projects/tree/main/AdventureWorks)
 
-SQL 
+SQL Server Data Analysis project to answer business relation questions
+
+- Show the first name and the email address of customer with CompanyName 'Bike World'?
+- Where did the racing socks go? List the product name and the CompanyName for all Customers who ordered ProductModel 'Racing Socks'?
+- How many products in ProductCategory 'Cranksets' have been sold to an address in 'London'?
+- ect
 
 ## [Chinook SQL Data  Analysis](https://github.com/Jimmy90s/Data-Analysis-Portfolio-Projects/tree/main/Chinook%20SQL%20Data%20Analysis)
 
 SQL Server Data Analysis project to help Chinook Digital Music Store to help how they can optimize their business opportunities and to help answering business related questions.
 
-countries with most invoices
-city with best customers
-finding out who the best customer is
-etc.
+- countries with most invoices?
+- city with best customers?
+- finding out who the best customer is?
+- etc.?
