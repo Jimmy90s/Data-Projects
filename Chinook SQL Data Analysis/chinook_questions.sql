@@ -84,20 +84,54 @@ JOIN chinook.dbo.Track T
 ON L.TrackId = T.TrackId
 
 -- Provide a query that includes the purchased track name AND artist name with each invoice line item.
-
+SELECT T.Name
+    ,T.Composer
+    ,L.InvoiceId
+FROM chinook.dbo.InvoiceLine L 
+JOIN chinook.dbo.Track T 
+ON L.TrackId = T.TrackId
 
 -- Provide a query that shows the # of invoices per country. HINT: GROUP BY
+SELECT BillingCountry 
+    ,COUNT(BillingCountry) AS Cnt_of_invoices_per_country
+FROM chinook.dbo.Invoice 
+GROUP BY BillingCountry
+
 -- Provide a query that shows the total number of tracks in each playlist. The Playlist name should be included on the resultant table.
+SELECT a.Name
+    ,COUNT(b.TrackId) Tracks_per_playlist
+FROM chinook.dbo.Playlist a
+JOIN chinook.dbo.PlaylistTrack b
+ON a.PlaylistId = b.PlaylistId
+GROUP BY a.Name
+
 -- Provide a query that shows all the Tracks, but displays no IDs. The resultant table should include the Album name, Media type and Genre.
--- Provide a query that shows all Invoices but includes the # of invoice line items.
--- Provide a query that shows total sales made by each sales agent.
--- Which sales agent made the most in sales in 2009?
--- Which sales agent made the most in sales in 2010?
--- Which sales agent made the most in sales over all?
--- Provide a query that shows the # of customers assigned to each sales agent.
--- Provide a query that shows the total sales per country. Which country's customers spent the most?
--- Provide a query that shows the most purchased track of 2013.
--- Provide a query that shows the top 5 most purchased tracks over all.
--- Provide a query that shows the top 3 best selling artists.
--- Provide a query that shows the most purchased Media Type.
--- Provide a query that shows the number tracks purchased in all invoices that contain more than one genre.
+WITH title
+AS(
+    SELECT a.Title , t.TrackId
+    FROM chinook.dbo.Track t
+    JOIN chinook.dbo.Album a
+    ON  a.AlbumId = t.AlbumId
+),
+mediatype
+AS(
+    SELECT m.Name , t.TrackId
+    FROM chinook.dbo.Track t
+    JOIN chinook.dbo.MediaType m
+    ON  t.MediaTypeId = m.MediaTypeId
+),
+genre
+AS(
+    SELECT g.Name , t.TrackId
+    FROM chinook.dbo.Track t
+    JOIN chinook.dbo.Genre g
+    ON  t.GenreId = g.GenreId
+)
+SELECT t.Title AS Album_Name
+    ,m.Name AS Media_type
+    ,g.Name AS Genre
+FROM title t
+JOIN mediatype m
+ON t.TrackId = m.TrackId
+JOIN genre g 
+ON g.TrackId = t.TrackId
