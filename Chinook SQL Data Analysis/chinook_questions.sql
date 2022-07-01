@@ -135,3 +135,43 @@ JOIN mediatype m
 ON t.TrackId = m.TrackId
 JOIN genre g 
 ON g.TrackId = t.TrackId
+
+-- Provide a query that shows all Invoices but includes the # of invoice line items.
+SELECT a.InvoiceId
+    ,COUNT(b.InvoiceId) AS cnt_of_line_times
+FROM chinook.dbo.Invoice a
+JOIN chinook.dbo.InvoiceLine b
+ON a.InvoiceId = b.InvoiceId
+GROUP BY a.InvoiceId
+
+-- Provide a query that shows total sales made by each sales agent.
+SELECT e.FirstName + ' ' + e.LastName AS Agent
+    ,SUM(i.Total) AS Total_Sales
+FROM chinook.dbo.Customer c
+JOIN chinook.dbo.Employee e
+ON c.SupportRepId = e.EmployeeId
+JOIN chinook.dbo.Invoice i 
+ON i.CustomerId = c.CustomerId
+GROUP BY e.FirstName, e.LastName
+
+-- Which sales agent made the most in sales in 2009?
+WITH sales 
+AS( 
+    SELECT e.FirstName + ' ' + e.LastName AS Agent
+        ,YEAR(i.InvoiceDate) AS Year
+        ,i.Total as Total
+    FROM chinook.dbo.Customer c
+    JOIN chinook.dbo.Employee e
+    ON c.SupportRepId = e.EmployeeId
+    JOIN chinook.dbo.Invoice i 
+    ON i.CustomerId = c.CustomerId
+    WHERE YEAR(i.InvoiceDate) = 2009
+)
+SELECT Agent 
+    ,Year,
+    ,SUM(Total) AS Total_Sales
+FROM sales
+GROUP BY Agent, Year
+ORDER BY SUM(Total) DESC
+
+
