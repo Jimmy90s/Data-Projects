@@ -168,10 +168,47 @@ AS(
     WHERE YEAR(i.InvoiceDate) = 2009
 )
 SELECT Agent 
-    ,Year,
+    ,Year
     ,SUM(Total) AS Total_Sales
 FROM sales
 GROUP BY Agent, Year
 ORDER BY SUM(Total) DESC
 
+-- Which sales agent made the most in sales in 2010?
+WITH sales 
+AS( 
+    SELECT e.FirstName + ' ' + e.LastName AS Agent
+        ,YEAR(i.InvoiceDate) AS Year
+        ,i.Total as Total
+    FROM chinook.dbo.Customer c
+    JOIN chinook.dbo.Employee e
+    ON c.SupportRepId = e.EmployeeId
+    JOIN chinook.dbo.Invoice i 
+    ON i.CustomerId = c.CustomerId
+    WHERE YEAR(i.InvoiceDate) = 2010
+)
+SELECT Agent 
+    ,Year
+    ,SUM(Total) AS Total_Sales
+FROM sales
+GROUP BY Agent, Year
+ORDER BY SUM(Total) DESC
 
+-- Which sales agent made the most in sales over all?
+WITH sales 
+AS( 
+    SELECT e.FirstName + ' ' + e.LastName AS Agent
+        ,YEAR(i.InvoiceDate) AS Year
+        ,i.Total as Total
+    FROM chinook.dbo.Customer c
+    JOIN chinook.dbo.Employee e
+    ON c.SupportRepId = e.EmployeeId
+    JOIN chinook.dbo.Invoice i 
+    ON i.CustomerId = c.CustomerId
+    --WHERE YEAR(i.InvoiceDate) = 2009
+)
+SELECT Agent 
+    ,SUM(Total) AS Total_Sales
+FROM sales
+GROUP BY Agent
+ORDER BY SUM(Total) DESC
