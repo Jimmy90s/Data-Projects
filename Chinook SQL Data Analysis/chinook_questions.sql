@@ -135,6 +135,7 @@ JOIN mediatype m
 ON t.TrackId = m.TrackId
 JOIN genre g 
 ON g.TrackId = t.TrackId
+--GROUP BY m.Name,t.Title,g.Name
 
 -- Provide a query that shows all Invoices but includes the # of invoice line items.
 SELECT a.InvoiceId
@@ -212,3 +213,108 @@ SELECT Agent
 FROM sales
 GROUP BY Agent
 ORDER BY SUM(Total) DESC
+
+-- Provide a query that shows the # of customers assigned to each sales agent.
+SELECT e.FirstName + ' ' + e.LastName AS Agent
+    ,COUNT(c.CustomerId) AS Customers_assinged
+FROM chinook.dbo.Customer c
+JOIN chinook.dbo.Employee e
+ON c.SupportRepId = e.EmployeeId
+GROUP BY e.FirstName, e.LastName
+
+-- Provide a query that shows the total sales per country. Which country's customers spent the most?
+SELECT BillingCountry AS Country
+    ,SUM(Total) Total
+FROM chinook.dbo.Invoice
+GROUP BY BillingCountry
+ORDER BY SUM(Total) DESC
+
+-- Provide a query that shows the most purchased track of 2013.
+WITH _2013
+AS(
+    SELECT t.Name
+        ,i.Total
+    FROM chinook.dbo.Invoice i 
+    JOIN chinook.dbo.InvoiceLine l 
+    ON i.InvoiceId = l.InvoiceId
+    JOIN chinook.dbo.Track t 
+    ON t.TrackId = l.TrackId
+    WHERE YEAR(i.InvoiceDate) = 2013
+)
+SELECT Name
+    ,SUM(Total) AS Total
+FROM _2013
+GROUP BY Name
+ORDER BY SUM(Total) DESC
+
+-- Provide a query that shows the top 5 most purchased tracks over all.
+WITH all_time
+AS(
+    SELECT t.Name
+        ,i.Total
+    FROM chinook.dbo.Invoice i 
+    JOIN chinook.dbo.InvoiceLine l 
+    ON i.InvoiceId = l.InvoiceId
+    JOIN chinook.dbo.Track t 
+    ON t.TrackId = l.TrackId
+)
+SELECT Name
+    ,SUM(Total) AS Total
+FROM all_time
+GROUP BY Name
+ORDER BY SUM(Total) DESC
+
+-- Provide a query that shows the top 3 best selling artists.
+WITH all_time
+AS(
+    SELECT t.Composer
+        ,i.Total
+    FROM chinook.dbo.Invoice i 
+    JOIN chinook.dbo.InvoiceLine l 
+    ON i.InvoiceId = l.InvoiceId
+    JOIN chinook.dbo.Track t 
+    ON t.TrackId = l.TrackId
+    WHERE t.Composer IS NOT NULL
+)
+SELECT Composer
+    ,SUM(Total) AS Total
+FROM all_time
+GROUP BY Composer
+ORDER BY SUM(Total) DESC
+
+-- Provide a query that shows the most purchased Media Type.
+WITH all_time
+AS(
+    SELECT m.Name
+        ,i.Total
+    FROM chinook.dbo.Invoice i 
+    JOIN chinook.dbo.InvoiceLine l 
+    ON i.InvoiceId = l.InvoiceId
+    JOIN chinook.dbo.Track t 
+    ON t.TrackId = l.TrackId
+    JOIN chinook.dbo.MediaType m 
+    ON m.MediaTypeId = t.MediaTypeId
+)
+SELECT Name
+    ,SUM(Total) AS Total
+FROM all_time
+GROUP BY Name
+ORDER BY SUM(Total) DESC
+
+-- Provide a query that shows the number of tracks purchased in all invoices that contain more than one genre.
+WITH genres
+AS(
+    SELECT t.Name AS Track
+        ,g.Name AS Genre
+    FROM chinook.dbo.Invoice i 
+    JOIN chinook.dbo.InvoiceLine l 
+    ON i.InvoiceId = l.InvoiceId
+    JOIN chinook.dbo.Track t 
+    ON t.TrackId = l.TrackId
+    JOIN chinook.dbo.Genre g
+    ON g.GenreId = t.GenreId
+    WHERE g.Name LIKE '%&%' 
+    OR g.Name LIKE '%/%'
+) 
+SELECT COUNT(*) AS tracks_with_2_or_more_genres
+FROM genres
