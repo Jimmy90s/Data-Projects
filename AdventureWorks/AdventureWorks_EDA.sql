@@ -237,3 +237,40 @@ SELECT range
     ,SUM(TotalDue) AS Total_value
 FROM _range
 GROUP BY range
+
+
+-- List the SalesOrderNumber for the customer 'Good Toys' 
+SELECT h.SalesOrderNumber
+    ,c.CompanyName
+FROM AdventureWorksLT2019.SalesLT.SalesOrderHeader h 
+JOIN AdventureWorksLT2019.SalesLT.Customer c 
+ON h.CustomerID = c.CustomerID
+WHERE c.CompanyName LIKE '%Good Toys%'
+OR c.CompanyName LIKE '%Bike World%'
+
+-- List the ProductName and the quantity of what was ordered by 'Futuristic Bikes'
+SELECT p.Name
+    ,d.OrderQty
+    ,c.CompanyName
+FROM AdventureWorksLT2019.SalesLT.SalesOrderHeader h 
+JOIN AdventureWorksLT2019.SalesLT.Customer c 
+ON h.CustomerID = c.CustomerID
+JOIN AdventureWorksLT2019.SalesLT.SalesOrderDetail d 
+ON d.SalesOrderID = h.SalesOrderID
+JOIN AdventureWorksLT2019.SalesLT.Product p 
+ON p.ProductID = d.ProductID
+WHERE c.CompanyName = 'Futuristic Bikes'
+
+
+-- Show the total order value for each CountryRegion. List by value with the highest first.
+SELECT SUM(h.TotalDue) AS total_order_value
+    ,a.CountryRegion
+FROM AdventureWorksLT2019.SalesLT.SalesOrderHeader h
+JOIN AdventureWorksLT2019.SalesLT.CustomerAddress c
+ON h.CustomerID = c.CustomerID
+JOIN AdventureWorksLT2019.SalesLT.Address a 
+ON a.AddressID = c.AddressID
+GROUP BY a.CountryRegion
+ORDER BY SUM(h.TotalDue) DESC
+
+
