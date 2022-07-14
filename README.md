@@ -42,3 +42,7 @@ SQL Server Data Analysis project to help Chinook Digital Music Store to help how
 - city with best customers?
 - finding out who the best customer is?
 - etc.?
+
+## SQL for Data Analysis - Weekender Crash Course
+ * beginner challenges.
+ * Udemy Course: [SQL for Data Analysis: Weekender Crash Course](https://www.udemy.com/course/sql-for-newbs/)
