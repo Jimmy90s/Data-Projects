@@ -16,7 +16,7 @@ Showcase of SQL, Tableau, Python data analysis related projects and challenges w
 ### [Tableau Public link](https://public.tableau.com/app/profile/james3436)
 
 # Projects 
-## Realtive Strength in the Stock market
+## [Realtive Strength in the Stock market](https://github.com/Jimmy90s/Data-Analysis-Portfolio-Projects/tree/main/Relative%20Strength)
 
 Correlation One Capstone Project
 
