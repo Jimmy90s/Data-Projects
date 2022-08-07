@@ -13,7 +13,12 @@ Showcase of SQL, Tableau, Python data analysis related projects and challenges w
  - MS SQL Server
  - Tableau
  
+### [Tableau Public link](https://public.tableau.com/app/profile/james3436)
+
 # Projects 
+## Realtive Strength in the Stock market
+
+Correlation One Capstone Project
 
 ## [CA & TX Income vs Education Data Analysis](https://github.com/Jimmy90s/Portfolio-Projects/tree/main/CA_TX_Income_vs_Education_Levels)
 
