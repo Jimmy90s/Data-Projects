@@ -2,8 +2,8 @@
 # Correlation One Data Analytics Capstone Project
  
 - Data Analytics course where we collaborated as a team and created a detailed 14-week project plan with weekly meetings to assign deliverables and ensure timeline  remained on track.
-- Python for data collection and claening 
-- Excel for more data cleaning and data analysis
+- Python for data collection and cleaning 
+- Excel for data analysis
 - Tableau for visualaztions and dashboards
 
 [Tableau Public Dashboard Link](https://public.tableau.com/app/profile/james3436/viz/Team_103_CapStone_Project_Dashboard/Main)
