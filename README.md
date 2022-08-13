@@ -18,7 +18,13 @@ Showcase of SQL, Tableau, Python data analysis related projects and challenges w
 # Projects 
 ## [Realtive Strength in the Stock market](https://github.com/Jimmy90s/Data-Analysis-Portfolio-Projects/tree/main/Relative%20Strength%20Comparison%20in%20the%20Stock%20Market)
 
-Correlation One Capstone Project
+Correlation One Data Analytics Course Capstone Project
+ 
+- Data Analytics course where we collaborated as a team to learn through real-world business cases.
+- Created a detailed 14-week project plan with weekly meetings to assign deliverables and ensure timeline  remained on track.
+- Python for data collection and claening 
+- Excel for more data cleaning and data analysis
+- Tableau for visualaztions and dashboards
 
 ## [CA & TX Income vs Education Data Analysis](https://github.com/Jimmy90s/Portfolio-Projects/tree/main/CA_TX_Income_vs_Education_Levels)
 
