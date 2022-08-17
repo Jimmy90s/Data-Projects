@@ -122,3 +122,32 @@ FROM sakila.dbo.payment p
 GROUP BY s.store_id
 ORDER BY 2 DESC
 
+
+/*How many rentals we have for each month*/
+SELECT MONTH(rental_date) rental_month
+    ,COUNT(MONTH(rental_date)) cnt_of_rentals_than_month
+FROM sakila.dbo.rental
+GROUP BY MONTH(rental_date)
+ORDER BY 1
+
+/* Rentals per Month (such Jan => How much, etc)*/
+SELECT CASE 
+    WHEN MONTH(rental_date) = 1 THEN 'Jan'
+    WHEN MONTH(rental_date) = 2 THEN 'Feb'
+    WHEN MONTH(rental_date) = 3 THEN 'Mar'
+    WHEN MONTH(rental_date) = 4 THEN 'Apr'
+    WHEN MONTH(rental_date) = 5 THEN 'May'
+    WHEN MONTH(rental_date) = 6 THEN 'Jun'
+    WHEN MONTH(rental_date) = 7 THEN 'Jul'
+    WHEN MONTH(rental_date) = 8 THEN 'Aug'
+    WHEN MONTH(rental_date) = 9 THEN 'Sep'
+    WHEN MONTH(rental_date) = 10 THEN 'Oct'
+    WHEN MONTH(rental_date) = 11 THEN 'Nov'
+    WHEN MONTH(rental_date) = 12 THEN 'Dec'
+    ELSE 'NAN'
+    END AS Month
+    ,COUNT(MONTH(rental_date)) cnt_of_rentals
+FROM sakila.dbo.rental
+GROUP BY MONTH(rental_date)
+
+
