@@ -1,12 +1,12 @@
 # Data Analysis Portfolio Projects
 
-Showcase of SQL, Tableau, Python data analysis related projects and challenges where I practice those skills.
+Showcase of Excel, SQL, Tableau, Python Data Analysis related projects and challenges where I practice those skills.
 
 ### Skills
 
- - Python
- - SQL
  - Excel
+ - SQL
+ - Python
  
 ### Tools
 
