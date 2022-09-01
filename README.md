@@ -24,7 +24,7 @@ Showcase of Excel, SQL, Tableau, Python Data Analysis related projects and chall
 - Data Analytics course where we collaborated as a team and created a detailed 14-week project plan with weekly meetings to assign deliverables and ensure timeline  remained on track.
 - Python for data collection and cleaning 
 - Excel for data analysis
-- Tableau for visualaztions and dashboards
+- Tableau for visualizations and dashboards
 
 ## [CA & TX Income vs Education Data Analysis](https://github.com/Jimmy90s/Portfolio-Projects/tree/main/CA_TX_Income_vs_Education_Levels)
 
