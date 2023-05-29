@@ -42,6 +42,12 @@ Showcase of Excel, SQL, Tableau, Python Data Analysis related projects and chall
 
 #### SQL, Python and Tableau project where I gathered us census data to perfrom data analysis and answer relation questions.
 
+- Utilized SQL to analyze California and Texas income versus education level percentages of 25 year olds or older over the last 5 years.
+- Applied data mining techniques to obtain US census data from https://data.census.gov by searching S1501 for education levels and DP03 for population data.
+- Uploaded multiple tables to SQL Server with the import wizard and analyzed using complex SQL queries.
+- Employed Data Profiling techniques by looking at the metadata to get names for the codes to label and identify columns during data cleaning, analysis and exploration with SQL and Python.
+
+
 ## [Supermart Grocery Sales - Retail Analytics Dataset](https://github.com/Jimmy90s/Portfolio-Projects/tree/main/Supermart%20Grocery%20Sales%20-%20Retail%20Analytics%20Dataset)
 
 #### SQL, Python
