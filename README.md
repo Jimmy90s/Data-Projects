@@ -1,4 +1,4 @@
-# Data Analysis Portfolio Projects
+# Data Portfolio Projects
 
 Showcase of Excel, SQL, Tableau, Python Data Analysis related projects and challenges where I practice those skills.
 
