@@ -13,6 +13,7 @@ Showcase of Excel, SQL, Tableau, Python Data Analysis related projects and chall
  - Jupyter Notebook
  - MS SQL Server
  - Tableau
+ - AWS
  
 ### [Tableau Public link](https://public.tableau.com/app/profile/james3436)
 
